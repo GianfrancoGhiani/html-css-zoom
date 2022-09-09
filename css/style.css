@@ -3,13 +3,116 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+:root{
+    --wt: white;
+    --bg-grey: rgba(128, 128, 128, 0.6);
+    --bg-blk: black;
+    --bg-bot: #222222;
+    --green: #4bc800;
+    --red: #ff0000;
+}
+/* repetitive things */
+li{
+    list-style: none;
+}
+.size-pos{
+    max-width: 1300px;
+    width: 90%;
+    height: calc(100vh - 130px);
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.f-end{
+    justify-content: flex-end;
+}
+.wt-txt{
+    color: var(--wt);
+}
+.btn{
+    background-color: rgb(128, 128, 128);
+    margin: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+}
+.pro-pic{
+    /* width: calc(100% /6) ; */
+}
+.pro-pic img{
+    width: 100%;
 }
 
-/* repetitive things */
-
-/* .size-pos{
-    width:90%;
-    margin: 30px auto;
-    height: 400px;
-    background-color: grey;
-} */
+/* specific */
+.top-bar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+.wrapper{
+    background-color: var(--bg-blk);
+    width: 100%;
+    height: calc(100vh - 130px);
+}
+.bot-bar{
+    width: 100%;
+    height: 80px;
+    background-color: var(--bg-bot);
+}
+.container{
+    overflow-y: auto;
+}
+.frst{
+    padding-right: 3px;
+}
+.user{
+    position: relative;
+    width: calc((100% - 50px) / 6) ;
+}
+.name{
+    position: absolute;
+    bottom: 5%;
+    left: 0px;
+    background-color: var(--bg-grey);
+    padding: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+.user:hover .name{
+    display: block;
+}
+.bot-bar li {
+    margin: 10px;
+    text-align: center;
+}
+li:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.icon{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.green{
+    color: var(--green);
+}
+.end{
+    padding: 10px;
+    color: var(--red);
+    border-radius: 10px;
+    background-color: var(--bg-grey);
+    cursor: pointer;
+    margin-right: 20px;
+}
+.end:hover{
+    cursor: pointer;
+    box-shadow: inset 0px 0px 10px 5px rgba(255,255,255,0.8);
+    color: orange;
+}
